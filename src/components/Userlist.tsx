@@ -1,4 +1,4 @@
-
+import NumberCounter from 'number-counter';
 interface UserDataPropsType {
     id: number,
     name: string,
@@ -28,7 +28,7 @@ export default function Userlist({ id, name, email, score, image, handleSetSingl
                         <p className="text-sm md:text-[8px] lg:text-xs font-medium text-[#79899e]">{email}</p>
                     </div>
                 </div>
-                <p className={`font-bold ${score > 50 ? "text-[#00a981]" : "text-[#EFBD4B]"} text-baselg:text-lg`}>{score}%</p>
+                <NumberCounter end={score} delay={0.5} postFix="%" className={`font-bold ${score > 50 ? "text-[#00a981]" : "text-[#EFBD4B]"} text-baselg:text-lg`}/>
             </div>
         </div>
     )
