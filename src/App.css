@@ -1,0 +1,38 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: #f8f9f8;
+}
+
+.user-list{
+    width: 350px;
+}
+.single-user{
+    width: 700px;
+}
+.sidebar{
+    width: 25%;
+}
+@media screen and (max-width:1200px) {
+    .sidebar{
+        width: 3%;
+    }
+    .user-list{
+        width: 30%;
+    }
+    .single-user{
+        width: 70%;
+    }
+    
+}
+@media screen and (max-width:863px) {
+    .user-assigment:nth-child(odd){
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:768px) {
+    .user-assigment:nth-child(odd){
+        flex-direction: row;
+    }
+}
