@@ -1,6 +1,9 @@
 //@ts-ignore
 import NumberCounter from 'number-counter';
 import { UserDataType } from "./Home";
+import ProgressBar from "@ramonak/react-progress-bar";
+import AnimatedNumbers from "react-animated-numbers"
+import { useMemo } from 'react';
 export default function SingleUser({
     name,
     email,
@@ -13,6 +16,10 @@ export default function SingleUser({
     hobbies,
     introduction,
     image }: UserDataType) {
+    const num = useMemo(() => score, [score])
+    const behaviouralNum = useMemo(() => behavioural, [behavioural])
+    const communicationNum = useMemo(() => communication, [communication])
+    const situation_handlingNum = useMemo(() => situation_handling, [situation_handling])
     return (
         <div className="single-user bg-white shadow-[rgba(99,99,99,0.1)_0px_2px_8px_0px] rounded-xl">
             <div className="flex flex-col sm:flex-row">
@@ -27,35 +34,107 @@ export default function SingleUser({
                                 <p className="font-medium text-[#79899e] text-sm md:text-xs lg:text-sm">{email}</p>
                             </div>
                         </div>
-                        <NumberCounter end={score} delay={0.5} postFix="%" className={`font-bold ${score > 50 ? "text-[#00BD65]" : "text-[#ebb221]"} text-2xl sm:text-3xl md:text-2xl lg:text-3xl`} />
+                        <AnimatedNumbers
+                            transitions={(index) => ({
+                                type: "spring",
+                                duration: index + 0.3,
+                            })}
+                            animateToNumber={num}
+                            fontStyle={{
+                                fontSize: 30,
+                                fontWeight: 500,
+                                color: score > 50 ? "#00BD65" : "#ebb221",
+                            }}
+                        />
                     </div>
 
                     <div className="my-8 flex flex-col gap-3">
                         <div className="flex justify-between items-center">
                             <p className="text-sm sm:text-base md:text-xs font-semibold text-[#79899e]">Behavioural</p>
                             <div className="flex items-center gap-4">
-                                <div className={`w-[130px] md:w-[70px] lg:w-[130px] h-[9px] bg-[#e1e8ef] rounded-xl relative hidden sm:inline-block`}>
-                                    <div style={{ width: `${behavioural * 10}%` }} className={`absolute ${behavioural > 6 ? "bg-[#00BD65]" : "bg-[#ebb221]"} h-[9px] rounded-lg`}></div>
-                                </div>
-                                <p className={`text-sm md:text-xs font-bold ${behavioural > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{behavioural}/10</p>
+                                <ProgressBar
+                                    completed={behavioural * 10}
+                                    isLabelVisible={false}
+                                    width='130px'
+                                    height='8px'
+                                    bgColor={`${behavioural > 6 ? "#00BD65" : "#ebb221"}`}
+                                    animateOnRender={true}
+                                    className='progressBar'
+                                />
+                                <AnimatedNumbers
+                                    transitions={(index) => ({
+                                        type: "spring",
+                                        duration: index + 0.3,
+                                    })}
+                                    animateToNumber={behaviouralNum}
+                                    fontStyle={{
+                                        fontSize: 12,
+                                        fontWeight: 500,
+                                        color: behaviouralNum > 6 ? "#00BD65" : "#ebb221",
+                                    }}
+                                />
+                                <span className={`text-sm md:text-xs font-bold ${behavioural > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
+                                {/* <NumberCounter end={behavioural} delay={0.3} postFix="/10" className={`text-sm md:text-xs font-bold ${behavioural > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`} /> */}
+                                {/* <p className={`text-sm md:text-xs font-bold ${behavioural > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{behavioural}/10</p> */}
+
                             </div>
                         </div>
                         <div className="flex justify-between items-center">
                             <p className="text-sm sm:text-base md:text-xs font-semibold text-[#79899e]">Communication</p>
                             <div className="flex items-center gap-4">
-                                <div className={`w-[130px] md:w-[70px] lg:w-[130px] h-[9px] bg-[#e1e8ef] rounded-xl relative hidden sm:inline-block overflow-hidden`}>
-                                    <div style={{ width: `${communication * 10}%` }} className={`absolute w-0 ${communication > 6 ? "bg-[#00BD65]" : "bg-[#ebb221]"} h-[9px] rounded-lg`}></div>
-                                </div>
-                                <p className={`text-sm md:text-xs font-bold ${communication > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{communication}/10</p>
+                                <ProgressBar
+                                    completed={communication * 10}
+                                    isLabelVisible={false}
+                                    width='130px'
+                                    height='8px'
+                                    bgColor={`${communication > 6 ? "#00BD65" : "#ebb221"}`}
+                                    animateOnRender={true}
+                                    className='progressBar'
+                                />
+                                <AnimatedNumbers
+                                    transitions={(index) => ({
+                                        type: "spring",
+                                        duration: index + 0.3,
+                                    })}
+                                    animateToNumber={communicationNum}
+                                    fontStyle={{
+                                        fontSize: 12,
+                                        fontWeight: 500,
+                                        color: communicationNum > 6 ? "#00BD65" : "#ebb221",
+                                    }}
+                                />
+                                <span className={`text-sm md:text-xs font-bold ${communication > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
+                                {/* <NumberCounter end={communication} delay={0.3} postFix="/10" className={`text-sm md:text-xs font-bold ${communication > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`} /> */}
+                                {/* <p className={`text-sm md:text-xs font-bold ${communication > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{communication}/10</p> */}
                             </div>
                         </div>
                         <div className="flex justify-between items-center">
                             <p className="text-sm sm:text-base md:text-xs font-semibold text-[#79899e]">Situation handling</p>
                             <div className="flex items-center gap-4">
-                                <div className={`w-[130px] md:w-[70px] lg:w-[130px] h-[9px] bg-[#e1e8ef] rounded-xl relative hidden sm:inline-block overflow-hidden`}>
-                                    <div style={{ width: `${situation_handling * 10}%` }} className={`absolute ${situation_handling > 6 ? "bg-[#00BD65]" : "bg-[#ebb221]"} h-[9px] rounded-lg`}></div>
-                                </div>
-                                <p className={`text-sm md:text-xs font-bold ${situation_handling > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{situation_handling}/10</p>
+                                <ProgressBar
+                                    completed={situation_handling * 10}
+                                    isLabelVisible={false}
+                                    width='130px'
+                                    height='8px'
+                                    bgColor={`${situation_handling > 6 ? "#00BD65" : "#ebb221"}`}
+                                    animateOnRender={true}
+                                    className='progressBar'
+                                />
+                                <AnimatedNumbers
+                                    transitions={(index) => ({
+                                        type: "spring",
+                                        duration: index + 0.3,
+                                    })}
+                                    animateToNumber={situation_handlingNum}
+                                    fontStyle={{
+                                        fontSize: 12,
+                                        fontWeight: 500,
+                                        color: situation_handlingNum > 6 ? "#00BD65" : "#ebb221",
+                                    }}
+                                />
+                                <span className={`text-sm md:text-xs font-bold ${situation_handling > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
+                                {/* <NumberCounter end={situation_handling} delay={0.3} postFix="/10" className={`text-sm md:text-xs font-bold ${situation_handling > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`} /> */}
+                                {/* <p className={`text-sm md:text-xs font-bold ${situation_handling > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{situation_handling}/10</p> */}
                             </div>
                         </div>
                     </div>

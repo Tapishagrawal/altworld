@@ -1,68 +1,108 @@
-*{
+* {
     font-family: "Roboto", sans-serif;
 }
-body{
+
+body {
     background-color: #f8f9f8;
 }
 
-.user-list{
+.user-list {
     width: 350px;
 }
-.single-user{
+
+.single-user {
     width: 700px;
 }
-.sidebar{
+
+.sidebar {
     width: 25%;
 }
+
 @media screen and (max-width:1200px) {
-    .sidebar{
+    .sidebar {
         width: 3%;
     }
-    .user-list{
+
+    .user-list {
         width: 30%;
     }
-    .single-user{
+
+    .single-user {
         width: 70%;
     }
-    
+
 }
+
 @media screen and (max-width:863px) {
-    .user-assigment:nth-child(odd){
+    .user-assigment:nth-child(odd) {
         flex-direction: column;
     }
 }
+
 @media screen and (max-width:768px) {
-    .user-assigment:nth-child(odd){
+    .user-assigment:nth-child(odd) {
         flex-direction: row;
     }
 }
+
 @media screen and (max-width:768px) {
-    .user-list{
+    .user-list {
         width: 100%;
     }
-    .single-user{
+
+    .single-user {
         width: 100%;
     }
 }
 
 .scroll-bar::-webkit-scrollbar {
-    width: 5px; /* width of the scrollbar */
+    width: 5px;
+    /* width of the scrollbar */
 }
+
 ::-webkit-scrollbar {
-    width: 10px; /* width of the scrollbar */
+    width: 10px;
+    /* width of the scrollbar */
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* color of the track */
+    background: #f1f1f1;
+    /* color of the track */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888; /* color of the scroll thumb */
+    background: #888;
+    /* color of the scroll thumb */
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* color of the scroll thumb on hover */
+    background: #555;
+    /* color of the scroll thumb on hover */
+}
+
+.wrapper {
+    border: 3px solid blue;
+}
+
+.container {
+    background-color: pink;
+}
+
+.barCompleted {
+    background-color: lightblue;
+    width: 80%;
+}
+
+.label {
+    font-size: 20px;
+    color: green;
+}
+
+@media screen and (max-width:375px) {
+    .progressBar{
+        display: none;
+    }
 }
