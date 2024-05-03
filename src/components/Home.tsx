@@ -42,7 +42,7 @@ export default function Home() {
       <h5 className="my-2 font-bold text-[#2d384a] text-[1rem] ml-4 sm:ml-0">Sales BDE</h5>
 
       <div className="flex mt-7 gap-4 flex-col md:flex-row">
-        <UserList userData={userData} handleSetSingleUser={handleSetSingleUser} isuserSelected={isuserSelected}/>
+        <UserList userData={userData} handleSetSingleUser={handleSetSingleUser} isuserSelected={isuserSelected} />
         {
           singleUser &&
           <SingleUser {...singleUser} />
