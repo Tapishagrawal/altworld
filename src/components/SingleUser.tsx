@@ -34,18 +34,21 @@ export default function SingleUser({
                                 <p className="font-medium text-[#79899e] text-sm md:text-xs lg:text-sm">{email}</p>
                             </div>
                         </div>
-                        <AnimatedNumbers
-                            transitions={(index) => ({
-                                type: "spring",
-                                duration: index + 0.3,
-                            })}
-                            animateToNumber={num}
-                            fontStyle={{
-                                fontSize: 30,
-                                fontWeight: 500,
-                                color: score > 50 ? "#00BD65" : "#ebb221",
-                            }}
-                        />
+                        <div className='flex items-center'>
+                            <AnimatedNumbers
+                                transitions={(index) => ({
+                                    type: "spring",
+                                    duration: index + 0.3,
+                                })}
+                                animateToNumber={num}
+                                fontStyle={{
+                                    fontSize: 30,
+                                    fontWeight: 500,
+                                    color: score > 50 ? "#00BD65" : "#ebb221",
+                                }}
+                            />
+                            <span className={`text-[25px] ${score > 50 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>%</span>
+                        </div>
                     </div>
 
                     <div className="my-8 flex flex-col gap-3">
@@ -73,10 +76,7 @@ export default function SingleUser({
                                         color: behaviouralNum > 6 ? "#00BD65" : "#ebb221",
                                     }}
                                 />
-                                <span className={`text-sm md:text-xs font-bold ${behavioural > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
-                                {/* <NumberCounter end={behavioural} delay={0.3} postFix="/10" className={`text-sm md:text-xs font-bold ${behavioural > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`} /> */}
-                                {/* <p className={`text-sm md:text-xs font-bold ${behavioural > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{behavioural}/10</p> */}
-
+                                <span className={`text-xs md:text-xs font-bold ${behavioural > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
                             </div>
                         </div>
                         <div className="flex justify-between items-center">
@@ -103,9 +103,7 @@ export default function SingleUser({
                                         color: communicationNum > 6 ? "#00BD65" : "#ebb221",
                                     }}
                                 />
-                                <span className={`text-sm md:text-xs font-bold ${communication > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
-                                {/* <NumberCounter end={communication} delay={0.3} postFix="/10" className={`text-sm md:text-xs font-bold ${communication > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`} /> */}
-                                {/* <p className={`text-sm md:text-xs font-bold ${communication > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{communication}/10</p> */}
+                                <span className={`text-xs md:text-xs font-bold ${communication > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
                             </div>
                         </div>
                         <div className="flex justify-between items-center">
@@ -132,9 +130,7 @@ export default function SingleUser({
                                         color: situation_handlingNum > 6 ? "#00BD65" : "#ebb221",
                                     }}
                                 />
-                                <span className={`text-sm md:text-xs font-bold ${situation_handling > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
-                                {/* <NumberCounter end={situation_handling} delay={0.3} postFix="/10" className={`text-sm md:text-xs font-bold ${situation_handling > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`} /> */}
-                                {/* <p className={`text-sm md:text-xs font-bold ${situation_handling > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{situation_handling}/10</p> */}
+                                <span className={`text-xs md:text-xs font-bold ${situation_handling > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
                             </div>
                         </div>
                     </div>
