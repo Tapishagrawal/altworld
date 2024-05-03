@@ -1,3 +1,4 @@
+//@ts-ignore
 import NumberCounter from 'number-counter';
 interface UserDataPropsType {
     id: number,
@@ -15,7 +16,7 @@ interface UserDataPropsType {
     handleSetSingleUser:(id:number)=>void
 }
 export default function Userlist({ id, name, email, score, image, handleSetSingleUser }: UserDataPropsType) {
-
+    
     return (
         <div>
             <div onClick={() => handleSetSingleUser(id)} className="cursor-pointer flex items-center justify-between hover:bg-[#f0f0ed] sm:pr-28 md:pr-4 px-4 py-2 lg:pr-16">
