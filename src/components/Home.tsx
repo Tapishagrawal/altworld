@@ -43,7 +43,7 @@ export default function Home() {
       <h5 className="my-2 font-bold text-[#2d384a] text-[1rem] ml-4 sm:ml-0">Sales BDE</h5>
 
       <div className="flex mt-7 gap-4 flex-col md:flex-row">
-        <div className="user-list lg:min-h-[620px] bg-white py-4 rounded-xl shadow-[rgba(99,99,99,0.1)_0px_2px_8px_0px]">
+        <div className="user-list h-[590px] overflow-hidden bg-white py-4 rounded-xl shadow-[rgba(99,99,99,0.1)_0px_2px_8px_0px]">
           <div className="px-4">
             <div className="my-2 mb-4 flex justify-between items-center">
               <h3 className="font-bold text-[#2d384a] text-xl md:text-base lg:text-lg">Sales BDE</h3>
@@ -82,11 +82,13 @@ export default function Home() {
               <p>CANDIDATE</p>
               <p>SCORE</p>
             </div>
-            {
-              userData?.map(user => (
-                <Userlist key={user.id} {...user} handleSetSingleUser={handleSetSingleUser} />
-              ))
-            }
+            <div className="scroll-bar overflow-auto h-[340px] pb-3">
+              {
+                userData?.map(user => (
+                  <Userlist key={user.id} {...user} handleSetSingleUser={handleSetSingleUser} />
+                ))
+              }
+            </div>
           </div>
         </div>
         {

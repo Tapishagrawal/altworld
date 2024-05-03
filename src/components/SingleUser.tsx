@@ -26,35 +26,35 @@ export default function SingleUser({
                                 <p className="font-medium text-[#79899e] text-sm md:text-xs lg:text-sm">{email}</p>
                             </div>
                         </div>
-                        <p className={`font-bold ${score > 50 ? "text-[#00BD65]" : "text-[#ebb221]"} text-3xl md:text-2xl lg:text-3xl`}>{score}%</p>
+                        <p className={`font-bold ${score > 50 ? "text-[#00BD65]" : "text-[#ebb221]"} text-2xl sm:text-3xl md:text-2xl lg:text-3xl`}>{score}%</p>
                     </div>
 
                     <div className="my-8 flex flex-col gap-3">
                         <div className="flex justify-between items-center">
-                            <p className="text-base md:text-xs font-semibold text-[#79899e]">Behavioural</p>
+                            <p className="text-sm sm:text-base md:text-xs font-semibold text-[#79899e]">Behavioural</p>
                             <div className="flex items-center gap-4">
                                 <div className={`w-[130px] md:w-[70px] lg:w-[130px] h-[9px] bg-[#e1e8ef] rounded-xl relative hidden sm:inline-block`}>
                                     <div style={{ width: `${behavioural * 10}%` }} className={`absolute ${behavioural > 6 ? "bg-[#00BD65]" : "bg-[#ebb221]"} h-[9px] rounded-lg`}></div>
                                 </div>
-                                <p className={`md:text-xs font-bold ${behavioural > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{behavioural}/10</p>
+                                <p className={`text-sm md:text-xs font-bold ${behavioural > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{behavioural}/10</p>
                             </div>
                         </div>
                         <div className="flex justify-between items-center">
-                            <p className="text-base md:text-xs font-semibold text-[#79899e]">Communication</p>
+                            <p className="text-sm sm:text-base md:text-xs font-semibold text-[#79899e]">Communication</p>
                             <div className="flex items-center gap-4">
                                 <div className={`w-[130px] md:w-[70px] lg:w-[130px] h-[9px] bg-[#e1e8ef] rounded-xl relative hidden sm:inline-block overflow-hidden`}>
                                     <div style={{ width: `${communication * 10}%` }} className={`absolute ${communication > 6 ? "bg-[#00BD65]" : "bg-[#ebb221]"} h-[9px] rounded-lg`}></div>
                                 </div>
-                                <p className={`md:text-xs font-bold ${communication > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{communication}/10</p>
+                                <p className={`text-sm md:text-xs font-bold ${communication > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{communication}/10</p>
                             </div>
                         </div>
                         <div className="flex justify-between items-center">
-                            <p className="md:text-xs font-semibold text-[#79899e]">Situation handling</p>
+                            <p className="text-sm sm:text-base md:text-xs font-semibold text-[#79899e]">Situation handling</p>
                             <div className="flex items-center gap-4">
                                 <div className={`w-[130px] md:w-[70px] lg:w-[130px] h-[9px] bg-[#e1e8ef] rounded-xl relative hidden sm:inline-block overflow-hidden`}>
                                     <div style={{ width: `${situation_handling * 10}%` }} className={`absolute ${situation_handling > 6 ? "bg-[#00BD65]" : "bg-[#ebb221]"} h-[9px] rounded-lg`}></div>
                                 </div>
-                                <p className={`mdtext-xs font-bold ${situation_handling > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{situation_handling}/10</p>
+                                <p className={`text-sm md:text-xs font-bold ${situation_handling > 6 ? "text-[#00BD65]" : "text-[#ebb221]"}`}>{situation_handling}/10</p>
                             </div>
                         </div>
                     </div>
