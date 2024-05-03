@@ -43,7 +43,7 @@ export default function Home() {
       <h5 className="my-2 font-bold text-[#2d384a] text-[1rem] ml-4 sm:ml-0">Sales BDE</h5>
 
       <div className="flex mt-7 gap-4 flex-col md:flex-row">
-        <div className="md:user-list lg:min-h-[620px] bg-white py-4 rounded-xl shadow-[rgba(99,99,99,0.1)_0px_2px_8px_0px]">
+        <div className="user-list lg:min-h-[620px] bg-white py-4 rounded-xl shadow-[rgba(99,99,99,0.1)_0px_2px_8px_0px]">
           <div className="px-4">
             <div className="my-2 mb-4 flex justify-between items-center">
               <h3 className="font-bold text-[#2d384a] text-xl md:text-base lg:text-lg">Sales BDE</h3>
@@ -54,8 +54,8 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-2">
               <div className="flex justify-between gap-2 user-assigment">
-                <div className="font-semibold text-[#79899e] text-[14px] md:text-xs lg:text-sm">Assignment Link</div>
-                <Link to={"/"} className="font-semibold text-[#288dff] text-[14px] md:text-xs lg:text-sm">https://tiny.url/asknakdna/</Link>
+                <div className="font-semibold text-[#79899e] text-[14px] md:text-xs lg:text-xs">Assignment Link</div>
+                <Link to={"/"} className="font-semibold text-[#288dff] text-[14px] md:text-xs lg:text-xs">https://tiny.url/asknakdna/</Link>
               </div>
               <div className="flex justify-between gap-2 user-assigment">
                 <div className="font-semibold text-[#79899e] text-[14px] md:text-xs lg:text-sm">Assignment hours</div>

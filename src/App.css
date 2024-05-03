@@ -36,3 +36,11 @@ body{
         flex-direction: row;
     }
 }
+@media screen and (max-width:768px) {
+    .user-list{
+        width: 100%;
+    }
+    .single-user{
+        width: 100%;
+    }
+}

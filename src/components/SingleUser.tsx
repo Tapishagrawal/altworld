@@ -13,7 +13,7 @@ export default function SingleUser({
     introduction,
     image }: UserDataType) {
     return (
-        <div className="w-full md:single-user bg-white shadow-[rgba(99,99,99,0.1)_0px_2px_8px_0px] rounded-xl">
+        <div className="single-user bg-white shadow-[rgba(99,99,99,0.1)_0px_2px_8px_0px] rounded-xl">
             <div className="flex flex-col sm:flex-row">
                 <div className="sm:w-[60%] lg:w-[50%] p-4 pl-6">
                     <div className="flex items-center justify-between">
