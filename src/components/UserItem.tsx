@@ -23,7 +23,7 @@ export default function UserItem({ id, name, email, score, image, handleSetSingl
             <div onClick={() => handleSetSingleUser(id)} className={`cursor-pointer flex items-center justify-between hover:bg-[#f0f0ed] ${isuserSelected === id && "bg-[#f0f0ed]"} sm:pr-28 md:pr-4 px-4 py-2 lg:pr-16`}>
                 <div className="flex items-center gap-2">
                     <div>
-                        <img src={image} className="rounded-xl object-cover object-center w-[50px] h-[50px] md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px]" alt="" />
+                        <img src={image} className="rounded-xl object-cover object-center w-[50px] h-[50px] md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] text-xs" alt={name} />
                     </div>
                     <div className="leading-[5px]">
                         <h3 className="font-medium text-[#2d384a] text-base md:text-xs lg:text-sm">{name}</h3>

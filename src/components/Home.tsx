@@ -19,7 +19,8 @@ export interface UserDataType {
   experience: string,
   hobbies: string,
   introduction: string,
-  image: string
+  image: string,
+  images:{img:string,question:string}[]
 }
 export default function Home() {
   const [userData] = useState<UserDataType[]>(data.data);

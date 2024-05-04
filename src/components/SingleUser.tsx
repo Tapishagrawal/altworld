@@ -4,6 +4,7 @@ import { UserDataType } from "./Home";
 import ProgressBar from "@ramonak/react-progress-bar";
 import AnimatedNumbers from "react-animated-numbers"
 import { useMemo } from 'react';
+import SwiperSlider from './SwiperSlider';
 export default function SingleUser({
     name,
     email,
@@ -15,19 +16,20 @@ export default function SingleUser({
     experience,
     hobbies,
     introduction,
-    image }: UserDataType) {
+    image,
+    images }: UserDataType) {
     const num = useMemo(() => score, [score])
     const behaviouralNum = useMemo(() => behavioural, [behavioural])
     const communicationNum = useMemo(() => communication, [communication])
     const situation_handlingNum = useMemo(() => situation_handling, [situation_handling])
     return (
         <div className="single-user bg-white shadow-[rgba(99,99,99,0.1)_0px_2px_8px_0px] rounded-xl">
-            <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-[60%] lg:w-[50%] p-4 pl-6">
+            <div className="flex flex-col min-[1200px]:gap-3 sm:flex-row">
+                <div className="sm:w-[60%] lg:w-[49%] p-4 pl-6 ">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                            <div>
-                                <img src={image} className="rounded-xl object-cover object-center w-[60px] h-[60px] md:w-[40px] md:h-[40px] lg:h-[60px] lg:w-[60px]" alt="" />
+                            <div >
+                                <img src={image} className="rounded-xl text-xs object-cover object-center w-[60px] h-[60px] md:w-[40px] md:h-[40px] lg:h-[60px] lg:w-[60px]" alt={name} />
                             </div>
                             <div>
                                 <h3 className="font-medium text-[#2d384a] text-base md:text-sm lg:text-base">{name}</h3>
@@ -157,8 +159,8 @@ export default function SingleUser({
                         <button className="bg-[#1EC3B3] text-white w-[70%] p-1 rounded-lg fontmedium">SHORTLIST</button>
                     </div>
                 </div>
-                <div className="sm:w-[40%] lg:w-[50%] p-2 self-center sm:self-start">
-                    <img src={image} alt="" className="rounded-lg w-[400px] h-[600px] overflow-hidden object-cover object-center" />
+                <div className="sm:w-[40%] lg:w-[49%] p-2 self-center sm:self-start">
+                    <SwiperSlider images={images} />
                 </div>
             </div>
         </div>
