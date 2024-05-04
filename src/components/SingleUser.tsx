@@ -30,8 +30,8 @@ export default function SingleUser({
                                 <img src={image} className="rounded-xl object-cover object-center w-[60px] h-[60px] md:w-[40px] md:h-[40px] lg:h-[60px] lg:w-[60px]" alt="" />
                             </div>
                             <div>
-                                <h3 className="font-bold text-[#2d384a] text-base md:text-sm lg:text-base">{name}</h3>
-                                <p className="font-medium text-[#79899e] text-sm md:text-xs lg:text-sm">{email}</p>
+                                <h3 className="font-medium text-[#2d384a] text-base md:text-sm lg:text-base">{name}</h3>
+                                <p className="font-light text-[#79899e] text-sm md:text-xs lg:text-sm">{email}</p>
                             </div>
                         </div>
                         <div className='flex items-center'>
@@ -43,7 +43,7 @@ export default function SingleUser({
                                 animateToNumber={num}
                                 fontStyle={{
                                     fontSize: 30,
-                                    fontWeight: 500,
+                                    fontWeight: 400,
                                     color: score > 50 ? "#00BD65" : "#ebb221",
                                 }}
                             />
@@ -53,7 +53,7 @@ export default function SingleUser({
 
                     <div className="my-8 flex flex-col gap-3">
                         <div className="flex justify-between items-center">
-                            <p className="text-sm sm:text-base md:text-xs font-semibold text-[#79899e]">Behavioural</p>
+                            <p className="text-sm sm:text-base md:text-xs text-[#79899e]">Behavioural</p>
                             <div className="flex items-center gap-4">
                                 <ProgressBar
                                     completed={behavioural * 10}
@@ -76,11 +76,11 @@ export default function SingleUser({
                                         color: behaviouralNum > 6 ? "#00BD65" : "#ebb221",
                                     }}
                                 />
-                                <span className={`text-xs md:text-xs font-bold ${behavioural > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
+                                <span className={`text-xs md:text-xs font-semibold ${behavioural > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
                             </div>
                         </div>
                         <div className="flex justify-between items-center">
-                            <p className="text-sm sm:text-base md:text-xs font-semibold text-[#79899e]">Communication</p>
+                            <p className="text-sm sm:text-base md:text-xs text-[#79899e]">Communication</p>
                             <div className="flex items-center gap-4">
                                 <ProgressBar
                                     completed={communication * 10}
@@ -103,11 +103,11 @@ export default function SingleUser({
                                         color: communicationNum > 6 ? "#00BD65" : "#ebb221",
                                     }}
                                 />
-                                <span className={`text-xs md:text-xs font-bold ${communication > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
+                                <span className={`text-xs md:text-xs font-semibold ${communication > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
                             </div>
                         </div>
                         <div className="flex justify-between items-center">
-                            <p className="text-sm sm:text-base md:text-xs font-semibold text-[#79899e]">Situation handling</p>
+                            <p className="text-sm sm:text-base md:text-xs text-[#79899e]">Situation handling</p>
                             <div className="flex items-center gap-4">
                                 <ProgressBar
                                     completed={situation_handling * 10}
@@ -130,31 +130,31 @@ export default function SingleUser({
                                         color: situation_handlingNum > 6 ? "#00BD65" : "#ebb221",
                                     }}
                                 />
-                                <span className={`text-xs md:text-xs font-bold ${situation_handling > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
+                                <span className={`text-xs md:text-xs font-semibold ${situation_handling > 6 ? "text-[#00BD65]" : "text-[#ebb221]"} -ml-3`}>/10</span>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex flex-col gap-7">
                         <div>
-                            <h3 className="font-bold text-[#2d384a] text-lg ">About</h3>
+                            <h3 className="font-semibold text-[#2d384a] text-lg ">About</h3>
                             <p className="text-xs font-medium text-[#79899e] line-clamp-2">{about}</p>
                         </div>
                         <div>
-                            <h3 className="font-bold text-[#2d384a] text-lg ">Experience</h3>
+                            <h3 className="font-semibold text-[#2d384a] text-lg ">Experience</h3>
                             <p className="text-xs font-medium text-[#79899e] line-clamp-2">{experience}</p>
                         </div>
                         <div>
-                            <h3 className="font-bold text-[#2d384a] text-lg ">Hobbies</h3>
+                            <h3 className="font-semibold text-[#2d384a] text-lg ">Hobbies</h3>
                             <p className="text-xs font-medium text-[#79899e] line-clamp-2">{hobbies}</p>
                         </div>
                         <div>
-                            <h3 className="font-bold text-[#2d384a] text-lg ">Introduction</h3>
+                            <h3 className="font-semibold text-[#2d384a] text-lg ">Introduction</h3>
                             <p className="text-xs font-medium text-[#79899e] line-clamp-2">{introduction}</p>
                         </div>
                     </div>
                     <div className="my-5 text-center">
-                        <button className="bg-[#1EC3B3] text-white w-[70%] p-1 rounded-lg font-medium">SHORTLIST</button>
+                        <button className="bg-[#1EC3B3] text-white w-[70%] p-1 rounded-lg fontmedium">SHORTLIST</button>
                     </div>
                 </div>
                 <div className="sm:w-[40%] lg:w-[50%] p-2 self-center sm:self-start">

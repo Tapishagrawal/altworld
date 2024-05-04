@@ -26,8 +26,8 @@ export default function UserItem({ id, name, email, score, image, handleSetSingl
                         <img src={image} className="rounded-xl object-cover object-center w-[50px] h-[50px] md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px]" alt="" />
                     </div>
                     <div className="leading-[5px]">
-                        <h3 className="font-bold text-[#2d384a] text-base md:text-xs lg:text-sm">{name}</h3>
-                        <p className="text-sm md:text-[8px] lg:text-xs font-medium text-[#79899e]">{email}</p>
+                        <h3 className="font-medium text-[#2d384a] text-base md:text-xs lg:text-sm">{name}</h3>
+                        <p className="text-sm md:text-[8px] lg:text-xs font-light text-[#79899e]">{email}</p>
                     </div>
                 </div>
                 <NumberCounter end={score} delay={0.5} postFix="%" className={`font-bold ${score > 50 ? "text-[#00a981]" : "text-[#EFBD4B]"} text-baselg:text-lg`} />
