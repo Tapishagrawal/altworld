@@ -34,7 +34,7 @@ export default function Sidebar() {
                 </div>
             }
 
-            <div className="sidebar">
+            <div className="sidebar -ml-1">
                 <div className={`w-full pr-7 bg-[#F8F9F8] max-[1200px]:hidden`}>
                     <div className="flex items-center gap-2 border-b pb-5">
                         <i className="text-3xl"><CiBoxes /></i>
@@ -53,7 +53,7 @@ export default function Sidebar() {
                         <button className="mt-3 bg-white text-[#303A4B] text-sm  w-full p-2 rounded-lg font-medium">Create New Assignment</button>
                     </div>
                 </div>
-                <button onClick={() => setIsMobileSidebarVisible(true)} className="hidden max-[1200px]:inline-block mr-2 py-2" ><i><RiMenu4Line /></i></button>
+                <button onClick={() => setIsMobileSidebarVisible(true)} className="hidden max-[1200px]:inline-block mr-2 mt-[5px]" ><i className="text-xl"><RiMenu4Line /></i></button>
             </div>
         </>
     )
